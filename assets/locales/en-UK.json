@@ -1,10 +1,11 @@
 {
-    "title" : "Movie Library",
-    "empty_data": "No movies found!",
+    "title" : "Product Inventory",
+    
+    "empty_data": "No product found!",
     "searched_keyword": "Searched with random keyword",
-    "empty_data_single": "No movie found!",
+    "empty_data_single": "No product found!",
     "erorr_message": "Something went wrong! \n Please try again later",
-    "movie_detail": "Movie Detail",
+    "movie_detail": "Product Detail",
     "no_internet_msg": "Sorry no Internet! Please check your network connection",
     "refresh": "Refresh",
     "search_movie": "Search",
@@ -12,6 +13,6 @@
     "lanuguage": "Language",
     "change_language": "Change language",
     "my_location": "My location",
-    "loading_movies":"Loading movies",
-    "loading_movie_single":"Loading Movie"
+    "loading_movies":"Loading Products",
+    "loading_movie_single":"Loading Product"
 }

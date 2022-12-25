@@ -104,7 +104,7 @@ class MovieDetailWidgetLandScape extends StatelessWidget {
                       height: 12.0,
                     ),
                     Text(
-                      'Plot',
+                      'Description',
                       style: textTheme.titleMedium,
                     ),
                     const SizedBox(

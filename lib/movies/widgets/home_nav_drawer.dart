@@ -78,12 +78,12 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
               );
             },
           ),
-          ListTile(
-            title: const Text('my_location').tr(),
-            onTap: () {
-              Navigator.push(context, LocationPage.route());
-            },
-          ),
+          // ListTile(
+          //   title: const Text('my_location').tr(),
+          //   onTap: () {
+          //     Navigator.push(context, LocationPage.route());
+          //   },
+          // ),
           ListTile(
             title: const Text('lanuguage').tr(),
             onTap: () {
