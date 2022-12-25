@@ -18,13 +18,17 @@ class Movie {
   @PrimaryKey(autoGenerate: true)
   @JsonKey(ignore: true)
   int? id;
-  @JsonKey(name: 'Title')
+  @JsonKey(name: 'title')
   String title;
-  @JsonKey(name: 'Year')
+  //Unused [feeding dummy data]
+  @JsonKey(name: 'category')
   String year;
-  @JsonKey(name: 'imdbID')
+
+  //product id
+  //Unused [feeding dummy data]
+  @JsonKey(name: 'description')
   String imdbId;
-  @JsonKey(name: 'Poster')
+  @JsonKey(name: 'image')
   String poster;
 
   factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);
@@ -33,6 +37,6 @@ class Movie {
 
   @override
   String toString() {
-    return 'id $id, Title $title, Year of Release $year, imdbId $imdbId';
+    return 'id $id, Title $title, imdbId $imdbId';
   }
 }

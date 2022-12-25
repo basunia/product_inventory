@@ -7,15 +7,15 @@ part of 'movie.dart';
 // **************************************************************************
 
 Movie _$MovieFromJson(Map<String, dynamic> json) => Movie(
-      title: json['Title'] as String,
-      year: json['Year'] as String,
-      imdbId: json['imdbID'] as String,
-      poster: json['Poster'] as String,
+      title: json['title'] as String,
+      year: json['category'] as String,
+      imdbId: json['description'] as String,
+      poster: json['image'] as String,
     );
 
 Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
-      'Title': instance.title,
-      'Year': instance.year,
-      'imdbID': instance.imdbId,
-      'Poster': instance.poster,
+      'title': instance.title,
+      'category': instance.year,
+      'description': instance.imdbId,
+      'image': instance.poster,
     };

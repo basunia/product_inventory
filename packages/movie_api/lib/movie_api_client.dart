@@ -28,17 +28,19 @@ class MovieApiClent {
   Future<List<Movie>> getMovies(
       {int page = 1, String searchTitle = 'man'}) async {
     try {
-      final response = await _apiClient.get('',
-          queryParameters: {'apikey': apiKey, 's': searchTitle, 'page': page});
+      final response = await _apiClient.get('products/');
+      // final response = await _apiClient.get('',
+      //     queryParameters: {'apikey': apiKey, 's': searchTitle, 'page': page});
 
       if (response.statusCode != 200) {
         throw MovieListRequestFailure();
       }
-      if (response.data['Search'] == null) {
+      if (response.data == null) {
         return <Movie>[];
       }
       List<Movie> movies =
-          response.data['Search'].map<Movie>((e) => Movie.fromJson(e)).toList();
+          response.data.map<Movie>((e) => Movie.fromJson(e)).toList();
+      print('Mydata $movies');
       return movies;
     } catch (e) {
       if (kDebugMode) {

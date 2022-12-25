@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-const String baseUrl = "http://www.omdbapi.com/";
+const String baseUrl = "https://fakestoreapi.com/";
 
 final option = BaseOptions(
     baseUrl: baseUrl,
