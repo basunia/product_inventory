@@ -30,6 +30,8 @@ class MovieDetail {
   String poster;
   @JsonKey(name: 'title')
   String title;
+  int price;
+
   // @JsonKey(name: 'Year')
   // String year;
   // @JsonKey(name: 'Released')
