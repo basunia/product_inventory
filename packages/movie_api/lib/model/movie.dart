@@ -25,9 +25,8 @@ class Movie {
   String year;
 
   //product id
-  //Unused [feeding dummy data]
-  @JsonKey(name: 'description')
-  String imdbId;
+  @JsonKey(name: 'id')
+  int imdbId;
   @JsonKey(name: 'image')
   String poster;
 

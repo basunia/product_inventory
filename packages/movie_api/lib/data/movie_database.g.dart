@@ -82,9 +82,9 @@ class _$AppDatabase extends AppDatabase {
       },
       onCreate: (database, version) async {
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `Movie` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT NOT NULL, `year` TEXT NOT NULL, `imdbId` TEXT NOT NULL, `poster` TEXT NOT NULL)');
+            'CREATE TABLE IF NOT EXISTS `Movie` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT NOT NULL, `year` TEXT NOT NULL, `imdbId` INTEGER NOT NULL, `poster` TEXT NOT NULL)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `MovieDetail` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `imdbId` TEXT NOT NULL, `poster` TEXT NOT NULL, `title` TEXT NOT NULL, `year` TEXT NOT NULL, `released` TEXT NOT NULL, `genre` TEXT NOT NULL, `plot` TEXT NOT NULL, `director` TEXT NOT NULL, `imdbRating` TEXT NOT NULL)');
+            'CREATE TABLE IF NOT EXISTS `MovieDetail` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `imdbId` INTEGER NOT NULL, `poster` TEXT NOT NULL, `title` TEXT NOT NULL, `genre` TEXT NOT NULL, `plot` TEXT NOT NULL)');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -109,12 +109,8 @@ class _$MovieDao extends MovieDao {
                   'imdbId': item.imdbId,
                   'poster': item.poster,
                   'title': item.title,
-                  'year': item.year,
-                  'released': item.released,
                   'genre': item.genre,
-                  'plot': item.plot,
-                  'director': item.director,
-                  'imdbRating': item.imdbRating
+                  'plot': item.plot
                 },
             changeListener),
         _movieInsertionAdapter = InsertionAdapter(
@@ -145,15 +141,11 @@ class _$MovieDao extends MovieDao {
         'SELECT * FROM MovieDetail WHERE imdbId = ?1',
         mapper: (Map<String, Object?> row) => MovieDetail(
             id: row['id'] as int?,
-            imdbId: row['imdbId'] as String,
+            imdbId: row['imdbId'] as int,
             poster: row['poster'] as String,
             title: row['title'] as String,
-            year: row['year'] as String,
-            released: row['released'] as String,
             genre: row['genre'] as String,
-            plot: row['plot'] as String,
-            director: row['director'] as String,
-            imdbRating: row['imdbRating'] as String),
+            plot: row['plot'] as String),
         arguments: [imdbId],
         queryableName: 'MovieDetail',
         isView: false);
@@ -164,15 +156,11 @@ class _$MovieDao extends MovieDao {
     return _queryAdapter.query('SELECT * FROM MovieDetail WHERE imdbId = ?1',
         mapper: (Map<String, Object?> row) => MovieDetail(
             id: row['id'] as int?,
-            imdbId: row['imdbId'] as String,
+            imdbId: row['imdbId'] as int,
             poster: row['poster'] as String,
             title: row['title'] as String,
-            year: row['year'] as String,
-            released: row['released'] as String,
             genre: row['genre'] as String,
-            plot: row['plot'] as String,
-            director: row['director'] as String,
-            imdbRating: row['imdbRating'] as String),
+            plot: row['plot'] as String),
         arguments: [imdbId]);
   }
 
@@ -183,7 +171,7 @@ class _$MovieDao extends MovieDao {
             id: row['id'] as int?,
             title: row['title'] as String,
             year: row['year'] as String,
-            imdbId: row['imdbId'] as String,
+            imdbId: row['imdbId'] as int,
             poster: row['poster'] as String),
         queryableName: 'Movie',
         isView: false);

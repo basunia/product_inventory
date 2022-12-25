@@ -57,29 +57,29 @@ class MovieDetailWidget extends StatelessWidget {
                           TableCellVerticalAlignment.middle,
                       border: TableBorder.all(width: 1.0, color: Colors.black),
                       children: [
+                        // TableRow(children: [
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       "IMDB rating",
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       movieDetail?.imdbRating ?? '',
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        // ]),
                         TableRow(children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              "IMDB rating",
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              movieDetail?.imdbRating ?? '',
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Genre",
+                              "Category",
                               textScaleFactor: 1.0,
                               style: textTheme.subtitle1,
                             ),
@@ -93,42 +93,42 @@ class MovieDetailWidget extends StatelessWidget {
                             ),
                           ),
                         ]),
-                        TableRow(children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Director",
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              movieDetail?.director ?? '',
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                        ]),
-                        TableRow(children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Released",
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              movieDetail?.released ?? '',
-                              textScaleFactor: 1.0,
-                              style: textTheme.subtitle1,
-                            ),
-                          ),
-                        ]),
+                        // TableRow(children: [
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       "Director",
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       movieDetail?.director ?? '',
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        // ]),
+                        // TableRow(children: [
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       "Released",
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        //   Padding(
+                        //     padding: const EdgeInsets.all(8.0),
+                        //     child: Text(
+                        //       movieDetail?.released ?? '',
+                        //       textScaleFactor: 1.0,
+                        //       style: textTheme.subtitle1,
+                        //     ),
+                        //   ),
+                        // ]),
                       ],
                     ),
                   ),

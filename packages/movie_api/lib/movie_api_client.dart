@@ -40,7 +40,7 @@ class MovieApiClent {
       }
       List<Movie> movies =
           response.data.map<Movie>((e) => Movie.fromJson(e)).toList();
-      print('Mydata $movies');
+      // print('Mydata $movies');
       return movies;
     } catch (e) {
       if (kDebugMode) {
@@ -52,8 +52,10 @@ class MovieApiClent {
 
   Future<MovieDetail> getMovieDetail(String imdbId) async {
     try {
-      final response = await _apiClient.get('',
-          queryParameters: {'apikey': apiKey, 'i': imdbId, 'plot': 'full'});
+      final response = await _apiClient.get('products/$imdbId');
+
+      // final response = await _apiClient.get('',
+      //     queryParameters: {'apikey': apiKey, 'i': imdbId, 'plot': 'full'});
 
       if (response.statusCode != 200) {
         throw MovieDetailRequestFailure();

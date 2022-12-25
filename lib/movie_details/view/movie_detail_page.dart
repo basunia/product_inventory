@@ -33,9 +33,10 @@ class MovieDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<MovieDetailBloc>(
-      create: (context) =>
-          MovieDetailBloc(movieRepository: context.read<MovieRepository>())
-            ..add(MovieDetailSubscriptionRequested(movieId: movie.imdbId)),
+      create: (context) => MovieDetailBloc(
+          movieRepository: context.read<MovieRepository>())
+        ..add(
+            MovieDetailSubscriptionRequested(movieId: movie.imdbId.toString())),
       child: MovieDetailView(movie: movie),
     );
   }
@@ -58,7 +59,7 @@ class _MovieDetailViewState extends State<MovieDetailView> {
   _fetchMovieDetail() async {
     context
         .read<MovieDetailBloc>()
-        .add(MovieDetailFetched(movieId: widget.movie.imdbId));
+        .add(MovieDetailFetched(movieId: widget.movie.imdbId.toString()));
   }
 
   @override
