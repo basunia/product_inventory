@@ -93,24 +93,24 @@ class MovieDetailWidget extends StatelessWidget {
                             ),
                           ),
                         ]),
-                        // TableRow(children: [
-                        //   Padding(
-                        //     padding: const EdgeInsets.all(8.0),
-                        //     child: Text(
-                        //       "Director",
-                        //       textScaleFactor: 1.0,
-                        //       style: textTheme.subtitle1,
-                        //     ),
-                        //   ),
-                        //   Padding(
-                        //     padding: const EdgeInsets.all(8.0),
-                        //     child: Text(
-                        //       movieDetail?.director ?? '',
-                        //       textScaleFactor: 1.0,
-                        //       style: textTheme.subtitle1,
-                        //     ),
-                        //   ),
-                        // ]),
+                        TableRow(children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              "Price",
+                              textScaleFactor: 1.0,
+                              style: textTheme.subtitle1,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              '${movieDetail?.price ?? 0.0} ৳',
+                              textScaleFactor: 1.0,
+                              style: textTheme.subtitle1,
+                            ),
+                          ),
+                        ]),
                         // TableRow(children: [
                         //   Padding(
                         //     padding: const EdgeInsets.all(8.0),

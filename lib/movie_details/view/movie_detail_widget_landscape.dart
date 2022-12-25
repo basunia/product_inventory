@@ -52,90 +52,54 @@ class MovieDetailWidgetLandScape extends StatelessWidget {
                         style: textTheme.caption,
                       ),
                     ),
-                    // Padding(
-                    //   padding: const EdgeInsets.all(0.0),
-                    //   child: Table(
-                    //     textDirection: TextDirection.ltr,
-                    //     defaultVerticalAlignment:
-                    //         TableCellVerticalAlignment.middle,
-                    //     border:
-                    //         TableBorder.all(width: 1.0, color: Colors.black),
-                    //     children: [
-                    //       TableRow(children: [
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             "IMDB rating",
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             movieDetail?.imdbRating ?? '',
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //       ]),
-                    //       TableRow(children: [
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             "Genre",
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             movieDetail?.genre ?? '',
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //       ]),
-                    //       TableRow(children: [
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             "Director",
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             movieDetail?.director ?? '',
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //       ]),
-                    //       TableRow(children: [
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             "Released",
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //         Padding(
-                    //           padding: const EdgeInsets.all(8.0),
-                    //           child: Text(
-                    //             movieDetail?.released ?? '',
-                    //             textScaleFactor: 1.0,
-                    //             style: textTheme.subtitle1,
-                    //           ),
-                    //         ),
-                    //       ]),
-                    //     ],
-                    //   ),
-                    // ),
+                    Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: Table(
+                        textDirection: TextDirection.ltr,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        border:
+                            TableBorder.all(width: 1.0, color: Colors.black),
+                        children: [
+                          TableRow(children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Genre",
+                                textScaleFactor: 1.0,
+                                style: textTheme.subtitle1,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                movieDetail?.genre ?? '',
+                                textScaleFactor: 1.0,
+                                style: textTheme.subtitle1,
+                              ),
+                            ),
+                          ]),
+                          TableRow(children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Price",
+                                textScaleFactor: 1.0,
+                                style: textTheme.subtitle1,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                '${movieDetail?.price ?? 0.0} ৳',
+                                textScaleFactor: 1.0,
+                                style: textTheme.subtitle1,
+                              ),
+                            ),
+                          ]),
+                        ],
+                      ),
+                    ),
                     const SizedBox(
                       height: 12.0,
                     ),

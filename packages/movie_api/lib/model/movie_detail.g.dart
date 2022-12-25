@@ -12,6 +12,7 @@ MovieDetail _$MovieDetailFromJson(Map<String, dynamic> json) => MovieDetail(
       title: json['title'] as String,
       genre: json['category'] as String,
       plot: json['description'] as String,
+      price: (json['price'] as num).toDouble(),
     );
 
 Map<String, dynamic> _$MovieDetailToJson(MovieDetail instance) =>
@@ -19,6 +20,7 @@ Map<String, dynamic> _$MovieDetailToJson(MovieDetail instance) =>
       'id': instance.imdbId,
       'image': instance.poster,
       'title': instance.title,
+      'price': instance.price,
       'category': instance.genre,
       'description': instance.plot,
     };

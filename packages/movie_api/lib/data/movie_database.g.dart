@@ -84,7 +84,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `Movie` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT NOT NULL, `year` TEXT NOT NULL, `imdbId` INTEGER NOT NULL, `poster` TEXT NOT NULL)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `MovieDetail` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `imdbId` INTEGER NOT NULL, `poster` TEXT NOT NULL, `title` TEXT NOT NULL, `genre` TEXT NOT NULL, `plot` TEXT NOT NULL)');
+            'CREATE TABLE IF NOT EXISTS `MovieDetail` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `imdbId` INTEGER NOT NULL, `poster` TEXT NOT NULL, `title` TEXT NOT NULL, `price` REAL NOT NULL, `genre` TEXT NOT NULL, `plot` TEXT NOT NULL)');
 
         await callback?.onCreate?.call(database, version);
       },
@@ -109,6 +109,7 @@ class _$MovieDao extends MovieDao {
                   'imdbId': item.imdbId,
                   'poster': item.poster,
                   'title': item.title,
+                  'price': item.price,
                   'genre': item.genre,
                   'plot': item.plot
                 },
@@ -145,7 +146,8 @@ class _$MovieDao extends MovieDao {
             poster: row['poster'] as String,
             title: row['title'] as String,
             genre: row['genre'] as String,
-            plot: row['plot'] as String),
+            plot: row['plot'] as String,
+            price: row['price'] as double),
         arguments: [imdbId],
         queryableName: 'MovieDetail',
         isView: false);
@@ -160,7 +162,8 @@ class _$MovieDao extends MovieDao {
             poster: row['poster'] as String,
             title: row['title'] as String,
             genre: row['genre'] as String,
-            plot: row['plot'] as String),
+            plot: row['plot'] as String,
+            price: row['price'] as double),
         arguments: [imdbId]);
   }
 

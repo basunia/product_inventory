@@ -8,18 +8,19 @@ part 'movie_detail.g.dart';
 @JsonSerializable()
 @entity
 class MovieDetail {
-  MovieDetail({
-    this.id,
-    required this.imdbId,
-    required this.poster,
-    required this.title,
-    // required this.year,
-    // required this.released,
-    required this.genre,
-    required this.plot,
-    // required this.director,
-    // required this.imdbRating,
-  });
+  MovieDetail(
+      {this.id,
+      required this.imdbId,
+      required this.poster,
+      required this.title,
+      // required this.year,
+      // required this.released,
+      required this.genre,
+      required this.plot,
+      required this.price
+      // required this.director,
+      // required this.imdbRating,
+      });
 
   @PrimaryKey(autoGenerate: true)
   @JsonKey(ignore: true)
@@ -30,19 +31,11 @@ class MovieDetail {
   String poster;
   @JsonKey(name: 'title')
   String title;
-  int price;
-
-  // @JsonKey(name: 'Year')
-  // String year;
-  // @JsonKey(name: 'Released')
-  // String released;
+  double price;
   @JsonKey(name: 'category')
   String genre;
   @JsonKey(name: 'description')
   String plot;
-  // @JsonKey(name: 'Director')
-  // String director;
-  // String imdbRating;
 
   factory MovieDetail.fromJson(Map<String, dynamic> json) =>
       _$MovieDetailFromJson(json);
