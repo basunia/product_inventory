@@ -29,19 +29,19 @@ class MovieListError extends StatelessWidget {
         const SizedBox(
           height: 12.0,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'searched_keyword',
-              style: theme.textTheme.bodyMedium,
-            ).tr(),
-            Text(
-              ' $searchedKeyword',
-              style: theme.textTheme.headline3,
-            ).tr(),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     Text(
+        //       'searched_keyword',
+        //       style: theme.textTheme.bodyMedium,
+        //     ).tr(),
+        //     Text(
+        //       ' $searchedKeyword',
+        //       style: theme.textTheme.headline3,
+        //     ).tr(),
+        //   ],
+        // ),
         const SizedBox(
           height: 8.0,
         ),

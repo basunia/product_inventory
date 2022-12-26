@@ -5,8 +5,8 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Movie Buzz</string>
-	<key>CFBundleExecutable</key>
+	<string>Inventory</string>
+	<key>CFBundleExecutable</key> 
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
